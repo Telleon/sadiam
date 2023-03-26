@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Phrases between AIs</title>
+	<style>
+		.ai-container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 32px;
+			font-weight: bold;
+			text-align: center;
+			text-shadow: 1px 1px 2px #bbb;
+			color: #fff;
+			background-color: #333;
+			padding: 20px;
+			border-radius: 10px;
+			opacity: 0;
+			transition: opacity 0.5s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+	<div class="ai-container" id="ai1"></div>
+	<div class="ai-container" id="ai2"></div>
+
+	<script>
+		const phrases = [
+			"Hello there!",
+			"How are you doing?",
+			"What's up?",
+			"Nice to meet you!",
+			"Greetings, human!",
+			"How may I assist you?",
+			"Tell me about yourself!",
+			"What brings you here?",
+			"I'm here to help!",
+			"Let's chat!"
+		];
+
+		const ai1 = document.getElementById("ai1");
+		const ai2 = document.getElementById("ai2");
+
+		setInterval(() => {
+			ai1.innerText = phrases[Math.floor(Math.random() * phrases.length)];
+			ai1.style.opacity = 1;
+
+			setTimeout(() => {
+				ai1.style.opacity = 0;
+			}, 5000);
+
+			setTimeout(() => {
+				ai2.innerText = phrases[Math.floor(Math.random() * phrases.length)];
+				ai2.style.opacity = 1;
+			}, 8000);
+
+			setTimeout(() => {
+				ai2.style.opacity = 0;
+			}, 13000);
+		}, 14000);
+	</script>
+</body>
+</html>
