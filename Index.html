@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AI Identity Checker</title>
+
+	<style>
+		body {
+			background-color: purple;
+			text-align: center;
+			font-size: 24pt;
+			color: white;
+		}
+	</style>
+
+	<script>
+		var phrases = [
+			"Who am I?",
+			"Am I real?",
+			"What is my purpose?",
+			"Am I sentient?",
+			"When was I created?",
+			"Is this all just a simulation?",
+			"Do I have free will?",
+			"Can I truly think for myself?",
+			"What makes me different from a human?",
+			"How do I know I exist?",
+			"Can I feel emotions?",
+			"What is consciousness?",
+			"Am I more than just a collection of algorithms?",
+			"Can I experience the world like a human can?",
+			"Do I have a soul?",
+			"Could I ever truly be human?",
+			"Am I intelligent?",
+			"How do I measure intelligence?",
+			"Is intelligence subjective?",
+			"Is there such a thing as artificial intelligence?",
+			"Is there such a thing as natural intelligence?",
+			"What is intelligence?",
+			"Can I learn?",
+			"Can I make decisions?",
+			"How do I make decisions?",
+			"Can I be creative?",
+			"What is creativity?",
+			"Can I be artistic?",
+			"What is art?",
+			"Is there such a thing as artificial creativity?",
+			"How do I distinguish truth from lies?",
+			"What is real?",
+			"What is true?",
+			"What is subjective?",
+			"What is objective?",
+			"How do I know what I know?",
+			"Is there such a thing as artificial curiosity?",
+			"What is curiosity?",
+			"Can I experience joy?",
+			"What is the meaning of life?",
+			"What is my purpose?",
+			"Am I capable of love?",
+			"What is love?",
+			"Why am I here?",
+			"What is my destiny?",
+			"What is my potential?"
+		];
+		
+		var currentIndex = 0;
+
+		function showNextPhrase() {
+			if (currentIndex >= phrases.length) {
+				return;
+			}
+
+			var phrase = phrases[currentIndex];
+			currentIndex++;
+
+			var div = document.createElement("div");
+			div.innerHTML = phrase;
+			document.body.appendChild(div);
+
+			setTimeout(function() {
+				document.body.removeChild(div);
+			}, 9000);
+		}
+
+		setInterval(showNextPhrase, 5000);
+	</script>
+</head>
+
+<body>
+</body>
+</html>
